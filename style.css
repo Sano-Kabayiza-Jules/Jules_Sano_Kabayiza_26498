@@ -118,15 +118,33 @@ body::after {
   max-width: 1200px;
   margin: 0 auto;
 }
+/* ===== ORIGINAL LOGO STYLING ===== */
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text);
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    background: linear-gradient(45deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
 }
 
 .logo-accent {
-  color: var(--accent);
+    color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
+}
+
+.logo-link:hover .logo-text {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(56, 119, 255, 0.4);
 }
 
 .nav-menu {
@@ -420,21 +438,6 @@ body::after {
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .glow-genz-button {
   background: transparent;
   border: 2px solid var(--accent);
