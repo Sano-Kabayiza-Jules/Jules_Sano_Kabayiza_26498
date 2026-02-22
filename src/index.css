@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors font-medium;
+  }
+
+  .task-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow cursor-pointer;
+  }
+
+  .priority-high {
+    @apply border-l-4 border-red-500;
+  }
+
+  .priority-medium {
+    @apply border-l-4 border-yellow-500;
+  }
+
+  .priority-low {
+    @apply border-l-4 border-green-500;
+  }
+
+  .status-todo {
+    @apply bg-gray-100 text-gray-700;
+  }
+
+  .status-progress {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .status-completed {
+    @apply bg-green-100 text-green-700;
+  }
+}
